@@ -1,5 +1,5 @@
 GO_VERSION := 1.17 # or "latest" for bleeding-edge Go version
-GO_BUILD_FLAGS := -x
+GO_BUILD_FLAGS := -ldflags '-w -s'
 GOCACHE ?= $(shell go env GOCACHE)
 GOPATH ?= $(shell go env GOPATH)
 
@@ -13,10 +13,10 @@ build:
 		-v "$(GOPATH)/src":/go/src \
 		-v "$(GOPATH)/pkg":/go/pkg \
 		-v "$(PWD)":/go/work \
-		-e GOARCH=386 \
+		-e GOARCH=amd64 \
 		-w /go/work \
-		x1unix/go-mingw:$(GO_VERSION) \
-		/bin/sh -c 'go build $(GO_BUILD_FLAGS) .'
+		docker-go-mingw:$(GO_VERSION) \
+		/bin/sh -c "go build $(GO_BUILD_FLAGS) ."
 
 # .PHONY: build-i386
 # build-i386:

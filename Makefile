@@ -1,4 +1,5 @@
-IMG_NAME = x1unix/go-mingw-test
+# to build docker image use this makefile, then the name of the docker image can be used locally for cross-compiling go
+IMG_NAME = docker-go-mingw
 
 .PHONY: image
 image:
