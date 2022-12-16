@@ -5,4 +5,4 @@ IMG_NAME = docker-go-mingw
 image:
 	@if [ -z $(GO_VERSION) ]; then echo "usage: 'make image GO_VERSION=[GO VERSION NUMBER]'" && exit 1; fi; \
 	echo ":: Building image..." &&\
-	docker build -t $(IMG_NAME):$(GO_VERSION) -f Dockerfile . --build-arg GO_VERSION=$(GO_VERSION)
+	docker build --network host -t $(IMG_NAME):$(GO_VERSION) -f Dockerfile . --build-arg GO_VERSION=$(GO_VERSION)

@@ -1,4 +1,4 @@
-GO_VERSION := 1.17 # or "latest" for bleeding-edge Go version
+GO_VERSION := 1.19 # or "latest" for bleeding-edge Go version
 GO_BUILD_FLAGS := -ldflags '-w -s'
 GOCACHE ?= $(shell go env GOCACHE)
 GOPATH ?= $(shell go env GOPATH)
