@@ -1,5 +1,6 @@
-#docker build -t docker-go-mingw:1.22 .
-ARG GO_VERSION=1.22
+#docker build --network host -t docker-go-mingw:1.23 .
+
+ARG GO_VERSION=1.23
 FROM golang:${GO_VERSION}-bullseye
 
 RUN apt update &&\
