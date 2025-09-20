@@ -1,4 +1,4 @@
-#docker build --network host -t docker-go-mingw:1.23 .
+#docker build --network host -t docker-go-mingw:1.24 .
 
 ARG GO_VERSION=1.24
 FROM golang:${GO_VERSION}-bullseye
