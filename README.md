@@ -9,7 +9,7 @@ The repository provides simple cross-compilation environment for windows 32 and 
 You can pull Docker image with desired Go version from Docker Hub:
 
 ```bash
-docker pull x1unix/go-mingw:latest # or "1.17" for specific Go version
+docker pull x1unix/go-mingw:latest # or "1.27" for specific Go version
 ```
 
 **Recommended:** Please take a look at [full project build example](example/sqlite-app) before starting to work.
@@ -113,7 +113,7 @@ To do this, mount your GOPATH or Go modules directory (`$GOPATH/pkg`).
 You can build image locally with specified Go version:
 
 ```bash
-make image GO_VERSION=1.17
+make image GO_VERSION=1.27
 ```
 
-Replace `1.17` with desired Go version.
+Replace `1.27` with desired Go version.

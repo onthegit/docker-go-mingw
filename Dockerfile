@@ -1,7 +1,7 @@
-#docker build --network host -t docker-go-mingw:1.24 .
+#docker build --network host -t docker-go-mingw:1.27 .
 
-ARG GO_VERSION=1.24
-FROM golang:${GO_VERSION}-bullseye
+ARG GO_VERSION=1.27
+FROM golang:${GO_VERSION}-bookworm
 
 RUN apt update &&\
     apt install \
